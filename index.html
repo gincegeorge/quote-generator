@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <h1>Quote generator</h1>
+        <div class="quote-box">
+            <p id="quote">
+                When you have a dream, you've got to grab it and never let go.
+            </p>
+            <div id="person">
+                -Carol Burnett
+            </div>
+        </div>
+        <a href="#" id="btn">New Quote</a>
+    </div> 
+
+<script>
+let quote = document.getElementById('quote');
+let person = document.getElementById('person');
+let newQuote = document.getElementById('btn');
+
+const quotes = [{
+    quote :`"Nothing is impossible. The word itself says 'I'm possible!"`, person: `"Audrey Hepburn"`
+},
+{
+    quote : `"Don't let small minds convince you that your dreams are too big.”`,person:`"Unknown"`
+},
+{
+    quote : `"There is nothing impossible to they who will try.”`,person:`"Alexander the Great"`
+}
+,
+{
+    quote : `"A jeourney of a thousand miles starts with a single step.”`,person:`"lao Tzu"`
+}
+,
+{
+    quote : `"The bad news is time flies. The good news is you're the pilot.”`,person:`"Michael Altshuler"`
+}
+,
+{
+    quote : `"Life has got all those twists and turns. You've got to hold on tight and off you go.”`,person:`"Nicole Kidman"`
+}
+,
+{
+    quote : `"Keep your face always toward the sunshine, and shadows will fall behind you.”`,person:`"Walt Whitman"`
+}
+,
+{
+    quote : `"Success is not final, failure is not fatal: it is the courage to continue that counts.”`,person:`"Winston Churchill"`
+}
+,
+{
+    quote : `"ou define your own life. Don't let other people write your script”`,person:`"Oprah Winfrey"`
+}
+,
+{
+    quote : `"You are never too old to set another goal or to dream a new dream.”`,person:`"Malala Yousafzai"`
+},
+{
+    quote : `"You can be everything. You can be the infinite amount of things that people are.”`,person:`"Kesha"`
+}
+];
+
+newQuote.addEventListener('click', function(e){
+    e.preventDefault;
+    let random = Math.floor(Math.random()*quotes.length);
+    quote.innerText = quotes[random].quote;
+    person.innerText = quotes[random].person;
+});
+
+
+</script>    
+</body>
+</html>
